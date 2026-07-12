@@ -1,0 +1,18 @@
+# robots.txt for ShineUP – shineupbrasov.ro
+# Spălătorie profesională de covoare în Brașov
+
+User-agent: *
+Allow: /
+Disallow: /assets/photos/_internal/
+
+# Crawl-delay for polite bots
+Crawl-delay: 2
+
+# Sitemap
+Sitemap: https://shineupbrasov.ro/sitemap.xml
+
+# Block aggressive AI scrapers (optional — uncomment if you wish)
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
