@@ -203,6 +203,9 @@
   /* ---------- pornire ---------- */
   function start() {
     var c = read();
+    // Cookie-urile ramase de la vizite mai vechi (dinainte de banner) se sterg daca nu exista acord pentru ele.
+    if (!c || !c.analytics) deleteCookies(/^_ga/);
+    if (!c || !c.marketing) deleteCookies(/^(_gcl_|_fbp$|_fbc$)/);
     if (c) apply(c, false);   // Consent Mode a fost deja actualizat inline, in <head>
     else open(false);
 
