@@ -1,0 +1,67 @@
+/* ShineUP – stiluri pentru paginile de politici (aceleasi culori si fonturi ca pe prima pagina) */
+:root{--ink:#0F172A;--ink-2:#334155;--ink-3:#64748B;--bg:#F8FAFC;--line:rgba(148,163,184,0.28);--blue:#06B6D4;--blue-deep:#0E7490;--serif:'Instrument Serif',Georgia,'Times New Roman',serif;--sans:'Manrope',-apple-system,BlinkMacSystemFont,sans-serif;--pad:clamp(20px,4vw,56px);--mbar-h:0px}
+@media (max-width:767px){:root{--mbar-h:calc(64px + env(safe-area-inset-bottom,0px))}}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding-bottom:var(--mbar-h)}
+a{color:inherit}
+.container{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
+
+/* Antet */
+.nav{position:sticky;top:0;z-index:50;background:rgba(248,250,252,0.94);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.logo{display:flex;line-height:0}
+.logo-img{height:56px;width:auto;display:block;border-radius:12px}
+.nav-cta{display:flex;align-items:center;gap:6px}
+.nav-phone{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 8px;font-size:15px;font-weight:800;letter-spacing:0.01em;text-decoration:none;white-space:nowrap}
+.nav-phone svg{color:var(--blue-deep)}
+.nav-phone:hover{color:var(--blue-deep)}
+.nav-whats{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-left:6px;padding:0 16px;border-radius:999px;background:#25D366;color:var(--ink);font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+.nav-whats:hover{background:#1FB855}
+@media (max-width:767px){.nav-inner{height:60px}.logo-img{height:44px}.nav-cta{display:none}}
+
+/* Continut */
+.legal-page{max-width:860px;margin:0 auto;padding:clamp(32px,6vw,72px) var(--pad) clamp(48px,8vw,96px)}
+.legal-page h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,5vw,56px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 10px}
+.legal-updated{color:var(--ink-3);font-style:italic;margin:0 0 32px}
+.legal-page h2{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,30px);line-height:1.2;letter-spacing:-0.01em;margin:36px 0 10px}
+.legal-page h2 small{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--ink-3);letter-spacing:0}
+.legal-page p{margin:0 0 14px;color:var(--ink-2)}
+.legal-page ul{margin:0 0 14px;padding-left:22px;color:var(--ink-2)}
+.legal-page li{margin-bottom:8px;padding-left:4px}
+.legal-page li::marker{color:var(--blue-deep)}
+.legal-page a{color:var(--blue-deep);font-weight:600;text-underline-offset:3px}
+.legal-page a:hover{color:var(--ink)}
+.legal-page code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:0.92em;background:#EEF2F7;padding:2px 6px;border-radius:6px;color:var(--ink)}
+
+/* Subsol */
+footer{background:var(--ink);color:rgba(255,255,255,0.86)}
+.footer-legal{padding:32px 0}
+.footer-legal-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:24px 40px;flex-wrap:wrap}
+.footer-legal-text{display:flex;flex-direction:column;gap:2px;font-size:15px;line-height:1.6}
+.footer-legal-text strong{color:#fff;font-weight:800;font-size:16px;letter-spacing:0.02em;margin-bottom:4px}
+.footer-legal-text a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,0.45)}
+.footer-legal-text a:hover{color:#67E8F9}
+.footer-legal-links{display:flex;flex-wrap:wrap;align-items:center;gap:0 12px;margin-top:12px}
+.footer-legal-links a{display:inline-flex;align-items:center;min-height:44px}
+.footer-legal-sep{color:rgba(255,255,255,0.4)}
+.footer-sal{display:block;width:250px;height:50px;flex-shrink:0}
+.footer-sal img{display:block;width:250px;height:50px;object-fit:contain}
+
+/* Bara fixa de apel pe mobil */
+.mbar{display:none}
+@media (max-width:767px){
+.mbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:6px;position:fixed;left:0;right:0;bottom:0;z-index:105;padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));background:rgba(15,23,42,0.97);border-top:1px solid rgba(255,255,255,0.14);box-shadow:0 -8px 24px rgba(15,23,42,0.25)}
+.mbar-btn{display:flex;align-items:center;justify-content:center;gap:5px;min-height:48px;padding:0 4px;border-radius:12px;font-weight:800;font-size:clamp(12px,3.4vw,15px);white-space:nowrap;color:var(--ink);text-decoration:none}
+.mbar-call{background:var(--blue)}
+.mbar-btn svg{flex-shrink:0}
+.mbar-wa{background:#25D366;padding:0 10px}
+body{font-size:16px}
+.footer-legal-text{font-size:16px}
+.footer-sal{margin:0 auto}
+}
+@media (max-width:339px){.mbar-wa span{display:none}.mbar-wa{padding:0 14px}}
+/* Telefon principal (plin) si telefon secundar (contur) */
+.nav-phone-2{font-size:14px;font-weight:600;color:var(--ink-2)}
+.nav-phone-2 svg{color:var(--ink-3)}
+@media (max-width:767px){.mbar-call-2{background:transparent;color:#fff;border:1.5px solid rgba(103,232,249,0.75)}}
